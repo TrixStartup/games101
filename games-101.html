@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <link rel="icon" href="https://github.com/gabziz/18-06/blob/main/img/icon.png?raw=true">
+  <link rel="stylesheet" href="nossosJogos.css">
+  <link rel="stylesheet" href="games-101.css">
+  <!--BoxIcon-->
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <!--Swiper File css-->
+  <link rel="stylesheet" href="swiper-bundle.min.css">
+  <!-- 
+  - google font
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+  href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Poppins:wght@400;500;700&display=swap"
+  rel="stylesheet">
+  <!--Fonte awesome-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trix - GameStore</title>
+</head>
+<body>
+
+  <header class="header">
+    
+    <!-- 
+      - overlay
+    -->
+    <div class="overlay" data-overlay></div>
+
+    <div class="container">
+
+      <a href="https://trixstartup.github.io/trix/" class="logo">
+        <img src="https://github.com/Naira-Duda-04/Imagem_TCC/blob/main/Logo-TCC.png?raw=true" alt="GameX logo" class="logo1">
+      </a>
+
+      <button class="nav-open-btn" data-nav-open-btn>
+        <ion-icon name="menu-outline"></ion-icon>
+      </button>
+
+      <nav class="navbar" data-nav>
+
+        <div class="navbar-top">
+
+          <a href="#" class="logo">
+            <img src="https://github.com/Naira-Duda-04/Imagem_TCC/blob/main/Logo-TCC.png?raw=true" alt="GameX logo">
+          </a>
+
+          <button class="nav-close-btn" data-nav-close-btn>
+            <ion-icon name="close-outline"></ion-icon>
+          </button>
+
+        </div>
+
+      </nav>
+
+      <div class="header-actions">
+
+            <div class="menu-icon">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </div>
+
+    </div> 
+</header>
+
+
+
+    <br><br>
+
+     <!--jogo-->
+     <div class="logoDeJogos">
+        <img src="https://plays.org/categories/base-defense-games.png" >
+        </div>
+        <br>   
+        <div class="jogo">
+            <div class="teclado">
+              <br>
+                <img src="nossosJogos-IMG/Teclado/Sonik-games.png">
+            </div>
+            <br><br>
+
+              <div class="container1">
+                  <div class="abc">
+                      <span>Score: <span id="scoreEl">0</span></span>
+                  </div>
+              
+                  <div style="position: absolute; top: 0; right: 0; padding: 8px" class="container1">
+                      <svg id="volumeUpEl" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                      <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"
+                      />
+                      </svg>
+                      
+                      <svg id="volumeOffEl" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                      <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"
+                          clip-rule="evenodd"
+                      />
+                      <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M17 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2"
+                      />
+                      </svg>
+                  </div>
+              
+                  <div id="modalEl" class="container1">
+                      <label style="font-size: 14px; color: gray">Game Over</label>
+                      <h1 id="modalScoreEl">0</h1>
+                      <p style="margin: 0; font-size: 14px; color: gray">Points</p>
+                      <button id="buttonEl">
+                      Restart Game
+                      </button>
+                  </div>
+              
+                  <div id="startModalEl" class="container1">
+                      <h1 style="font-size: 24px; margin-bottom: 0; margin-top: 8px">
+                      Base Defense Game
+                      </h1>
+                  
+                      <button id="startButtonEl">
+                      Start
+                      </button>
+                  </div>
+              
+                  <canvas class="container1"></canvas>
+              </div>
+          </div>
+      </div>
+        <br><br><br><br><br><br>
+        
+             <!--nossos jogos-->
+        <section class="new container" id="Nossos jogos">
+          <div class="heading">
+              <i class='bx bx-game'></i>
+              <h2>Nossos jogos</h2>
+          </div>
+          <!--content-->
+          <div class="new-content">
+              <!--Card 1-->
+              <div class="box">
+                  <img src="https://s2-techtudo.glbimg.com/QUILJHt1swmJ0EF-IXwf1u_KxeA=/0x0:620x388/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_08fbf48bc0524877943fe86e43087e7a/internal_photos/bs/2021/l/U/sKjJ6gQ5K15KV22SOt2A/2016-03-02-space-invaders.jpg" alt="">
+                  <div class="box-text">
+                      <h2>Space-invaders</h2>
+                      <br>
+                      <div class="rating-download">
+                          <div class="rating">
+                              <i class='bx bxs-star'></i>
+                              <span>4.7</span>
+                          </div>
+                          <a href="https://trixstartup.github.io/space-invaders/" class="box-btn"><i class="bx bx-down-arrow-alt"></i>
+    
+                          </a>
+                      </div>
+                  </div>
+              </div>
+    
+              <!--Card 2-->
+              <div class="box">
+                  <img src="/nossosJogos-IMG/mario.PNG" alt="">
+                  <div class="box-text">
+                      <h2>Mario</h2>
+                      <br>
+                      <div class="rating-download">
+                          <div class="rating">
+                              <i class='bx bxs-star'></i>
+                              <span>4.7</span>
+                          </div>
+                          <a href="https://trixstartup.github.io/mario/" class="box-btn"><i class="bx bx-down-arrow-alt"></i>
+    
+                          </a>
+                      </div>
+                  </div>
+              </div>
+    
+              <!--Card 3-->
+              <div class="box">
+                  <img src="/nossosJogos-IMG/fightingGame.PNG" alt="">
+                  <div class="box-text">
+                      <h2>Fighting Game</h2>
+                      <br>
+                      <div class="rating-download">
+                          <div class="rating">
+                              <i class='bx bxs-star'></i>
+                              <span>4.7</span>
+                          </div>
+                          <a href="https://trixstartup.github.io/fightingGame/" class="box-btn"><i class="bx bx-down-arrow-alt"></i>
+    
+                          </a>
+                      </div>
+                  </div>
+              </div>
+    
+              <!--Card 4-->
+              <div class="box">
+                  <img src="https://thumbs.web.sapo.io/?W=800&H=0&delay_optim=1&epic=NGRiQ8y+7rDb2cocSbMwl47ynqxTFYLIDm2IhR5IZK5BFQooKY19ghBWe//2n+M5C2MgCiqhexDuDLBr/f/MrofnNA==" alt="">
+                  <div class="box-text">
+                      <h2>Pac-Man</h2>
+                      <br>
+                      <div class="rating-download">
+                          <div class="rating">
+                              <i class='bx bxs-star'></i>
+                              <span>4.7</span>
+                          </div>
+                          <a href="https://trixstartup.github.io/pacman/" class="box-btn"><i class="bx bx-down-arrow-alt"></i>
+    
+                          </a>
+                      </div>
+                  </div>
+              </div>        
+      </section>
+    
+     <!--Footer-->
+    
+     <footer>
+    
+      <div class="footer-top">
+        <div class="container">
+  
+          <div class="footer-brand-wrapper">
+  
+            <a href="../index.html" class="logo">
+              <img src="https://github.com/Naira-Duda-04/Imagem_TCC/blob/main/Logo-TCC.png?raw=true" alt="GameX logo" class="logo2" width="2%">
+            </a>
+  
+            
+            </div>
+  
+          </div>
+  
+        </div>
+      </div>
+  
+      <div class="footer-bottom">
+        <div class="container">
+          <p class="copyright">
+            Copyright &copy; 2023 <a href="#">Trix</a>. all rights reserved
+          </p>
+        </div>
+      </div>
+  
+    </footer>
+    
+    
+      <!-- 
+        - #GO TO TOP
+      -->
+    
+      <a href="#top" class="btn btn-primary go-top" data-go-top>
+        <ion-icon name="chevron-up-outline"></ion-icon>
+      </a>
+
+      <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+<!--Swiper File-->
+<script src="swiper-bundle.min.js"></script>
+<!---->
+
+
+    <!--JavaScript-->
+    <script src="mein.js"></script>
+
+    <!-- games 101 -->
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"
+        integrity="sha512-6+YN/9o9BWrk6wSfGxQGpt3EUK6XeHi6yeHV+TYD2GR0Sj/cggRpXr1BrAQf0as6XslxomMUxXp2vIl+fv0QRA=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+    ></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.2/gsap.min.js"
+        integrity="sha512-kVlGhj2qFy+KBCFuvjBJTGUMxbdqJKs4yK2jh0e0VPhWUPiPC87bzm4THmaaIee3Oj7j6sDpTTgm2EPPiESqBg=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+    ></script>
+    <script src="audio.js"></script>
+    <script src="classes.js"></script>
+    <script src="games-101.js"></script>
+
+    
+    
+</body>
+</html>
